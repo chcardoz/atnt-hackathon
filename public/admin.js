@@ -35,12 +35,13 @@ peer.on("call", (call) => {
     addVideoStream(video, stream);
   });
   call.on("close", () => {
-    video.remove();
+    removeAllChildNodes(videoGrid);
   });
 });
 
 span.onclick = function () {
   modal.style.display = "none";
+  removeAllChildNodes(videoGrid);
 };
 
 window.onclick = function (event) {
@@ -56,4 +57,10 @@ function addVideoStream(video, stream) {
     video.play();
   });
   videoGrid.append(video);
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }

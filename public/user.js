@@ -46,6 +46,12 @@ socket.on("receive-admin-key", (id) => {
 });
 
 span.onclick = function () {
+  const stream = myVideo.srcObject;
+  const tracks = stream.getVideoTracks();
+  tracks.forEach((track) => {
+    track.stop();
+  });
+  myVideo.srcObject = null;
   modal.style.display = "none";
 };
 
