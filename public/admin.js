@@ -1,6 +1,5 @@
 const peer = new Peer(undefined, {
-  host: "/",
-  port: "3001",
+  debug: 2,
 });
 const socket = io("/");
 var connectedUsers = [];

@@ -1,7 +1,6 @@
 const socket = io("/");
 const peer = new Peer(undefined, {
-  host: "/",
-  port: "3001",
+  debug: 2,
 });
 const sections = document.getElementsByClassName("sections");
 const allsections = "ABCDEFGH";
