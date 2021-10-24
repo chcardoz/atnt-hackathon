@@ -9,7 +9,6 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 const videoGrid = document.getElementById("video-grid");
-const video = document.createElement("video");
 
 Array.prototype.forEach.call(sections, (section) => {
   section.addEventListener("click", (e) => {
@@ -29,6 +28,7 @@ socket.on("user-connected", (userId) => {
 });
 
 peer.on("call", (call) => {
+  const video = document.createElement("video");
   call.answer();
   call.on("stream", (stream) => {
     console.log("stream received");

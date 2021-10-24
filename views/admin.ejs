@@ -4,87 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <script
       src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"
       defer
     ></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="admin.js" defer></script>
-    <title>Document</title>
+    <title>ADMIN VIEW</title>
     <link rel="stylesheet" type="text/css" href="admin.css" media="screen" />
   </head>
   <body>
-    <svg
-      width="416"
-      height="414"
-      viewBox="0 0 416 414"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        class="sections"
-        id="A"
-        x="158.5"
-        y="0.5"
-        width="100"
-        height="68"
-        stroke="black"
-      />
-      <rect
-        class="sections"
-        id="B"
-        x="157.5"
-        y="345.5"
-        width="100"
-        height="68"
-        stroke="black"
-      />
-      <rect
-        class="sections"
-        id="C"
-        x="334.5"
-        y="131.5"
-        width="80"
-        height="150"
-        stroke="black"
-      />
-      <rect
-        class="sections"
-        id="D"
-        x="1.5"
-        y="131.5"
-        width="82"
-        height="150"
-        stroke="black"
-      />
-      <path
-        class="sections"
-        id="E"
-        d="M158 68.4074C111.2 68.4074 83.8999 94.0864 83.8999 131H2C1.99996 61.9876 60.4998 1.00002 158 1V68.4074Z"
-        stroke="black"
-      />
-      <path
-        class="sections"
-        id="F"
-        d="M157 345.593C110.2 345.593 82.8999 319.914 82.8999 283H1C0.999962 352.012 59.4998 413 157 413V345.593Z"
-        stroke="black"
-      />
-      <path
-        class="sections"
-        id="G"
-        d="M259 345.593C305.8 345.593 333.1 319.914 333.1 283H415C415 352.012 356.5 413 259 413V345.593Z"
-        stroke="black"
-      />
-      <path
-        class="sections"
-        id="H"
-        d="M259 68.4074C305.8 68.4074 333.1 94.0864 333.1 131H415C415 61.9876 356.5 1.00002 259 1V68.4074Z"
-        stroke="black"
-      />
-    </svg>
-    <div id="myModal" class="modal">
+    <div id="content">
+      <h1>ADMIN VIEW</h1>
+      <h3>Stadium view</h3>
+      <p>Hover over any of the stadium sections to ask any fans in that section to stream the match from their viewpoint.</p>
+      <svg
+        width="416"
+        height="414"
+        viewBox="0 0 416 414"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          class="sections"
+          id="A"
+          x="158.5"
+          y="0.5"
+          width="100"
+          height="68"
+          stroke="black"
+        />
+        <rect
+          class="sections"
+          id="B"
+          x="157.5"
+          y="345.5"
+          width="100"
+          height="68"
+          stroke="black"
+        />
+        <rect
+          class="sections"
+          id="C"
+          x="334.5"
+          y="131.5"
+          width="80"
+          height="150"
+          stroke="black"
+        />
+        <rect
+          class="sections"
+          id="D"
+          x="1.5"
+          y="131.5"
+          width="82"
+          height="150"
+          stroke="black"
+        />
+        <path
+          class="sections"
+          id="E"
+          d="M158 68.4074C111.2 68.4074 83.8999 94.0864 83.8999 131H2C1.99996 61.9876 60.4998 1.00002 158 1V68.4074Z"
+          stroke="black"
+        />
+        <path
+          class="sections"
+          id="F"
+          d="M157 345.593C110.2 345.593 82.8999 319.914 82.8999 283H1C0.999962 352.012 59.4998 413 157 413V345.593Z"
+          stroke="black"
+        />
+        <path
+          class="sections"
+          id="G"
+          d="M259 345.593C305.8 345.593 333.1 319.914 333.1 283H415C415 352.012 356.5 413 259 413V345.593Z"
+          stroke="black"
+        />
+        <path
+          class="sections"
+          id="H"
+          d="M259 68.4074C305.8 68.4074 333.1 94.0864 333.1 131H415C415 61.9876 356.5 1.00002 259 1V68.4074Z"
+          stroke="black"
+        />
+      </svg>
+      <div id="myModal" class="modal">
+    </div>
   <div class="modal-content">
     <span class="close">&times;</span>
+    <p>Select a winner by double clicking on the users stream</p>
     <div id="video-grid"></div>
   </div>
   </body>
